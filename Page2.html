@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2 - PRESENTATION</title>
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc; /* Un fond clair pour une ambiance professionnelle */
+            color: #333; /* Texte en gris foncé pour une bonne lisibilité */
+            line-height: 1.6;
+        }
+
+        /* Header avec logo et titre centré */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 0;
+            background-color: #ffffff; /* Fond blanc pour le header */
+            border-bottom: 3px solid #ff9900; /* Une ligne de séparation au bas du header */
+        }
+
+        .header img {
+            max-width: 100px;
+            border-radius: 50%; /* Rondir les coins du logo */
+        }
+
+        .header h2 {
+            font-size: 2rem;
+            color: #ff9900;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Section de contenu principale */
+        .content-section {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h3 {
+            color: #00509e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .content-section a {
+            color: #00509e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style pour les images centrées */
+        .img-center {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ligne de séparation */
+        hr {
+            border: 0;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+
+        /* Style responsive pour les petits écrans */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .content-section h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Espace ajouté pour une meilleure présentation -->
+    <br/><br/><br/>
+
+    <!-- Section du header avec les images et le texte centré -->
+    <div class="header">
+        <a href="http://www.pigier-benin.com" target="_blank">
+            <img src="OIP.jpg" alt="Logo">
+        </a>
+        <h2>BIENVENUE SUR MON SITE</h2>
+        <a href="http://www.pigier-benin.com" target="_blank">
+            <img src="OIP.jpg" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Ligne horizontale de séparation -->
+    <hr>
+
+    <!-- Section I. État Civil -->
+    <div class="content-section">
+        <h3>I. ETAT CIVIL</h3>
+        <p><a href="#description">Nom: TOKPANOU</a></p>
+        <p>PRENOM: Gilles Cyrus</p>
+        <p>CONTACT: +229 56525300</p>
+    </div>
+
+    <hr>
+
+    <!-- Image cliquable pour redirection -->
+    <a href="page3.html" target="_blank">
+        <img src="OIP.jpg" alt="Photo" class="img-center">
+    </a>
+
+    <hr>
+
+    <!-- Section II. Compétences/Diplômes -->
+    <div class="content-section">
+        <h3>II. COMPETENCE/DIPLOMES</h3>
+        <p>1. CEP</p>
+        <p>2. BEPC</p>
+        <p>3. BAC</p>
+    </div>
+
+    <hr>
+
+    <!-- Section III. Ma Description -->
+    <div id="description" class="content-section">
+        <h3>III. MA DESCRIPTION </h3>
+        <p>HELLO, en ce qui me concerne, Gilles est un étudiant en sécurité informatique, passionné par les défis technologiques et la protection des données. Avec un esprit curieux et analytique, il passe des heures à apprendre les nouvelles techniques de cybersécurité et à développer ses compétences en programmation.</p>
+
+        <p>En dehors de ses études, Lucas est un fervent joueur de basketball. Chaque semaine, il retrouve ses amis sur le terrain pour des matchs endiablés, où il met à l’épreuve son agilité et son esprit d’équipe. Le basketball lui offre une échappatoire énergique et lui permet de maintenir un bon équilibre entre travail et loisir.</p>
+
+        <p>Gilles est également un amateur de jeux vidéo, où il s'immerge dans des mondes virtuels tout en partageant des sessions de jeu avec ses amis. Il aime les jeux stratégiques qui stimulent sa réflexion et lui permettent d'appliquer ses compétences analytiques dans un cadre ludique.</p>
+
+        <p>Enfin, Gilles a un véritable penchant pour la gastronomie. Il adore explorer de nouveaux restaurants, qu'il s'agisse de petites adresses conviviales ou de lieux raffinés. Pour lui, chaque repas est une aventure, et il aime partager ses découvertes culinaires avec ses amis lors de sorties détendues.</p>
+    </div>
+</div>
+
+<!-- Lien vers les scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

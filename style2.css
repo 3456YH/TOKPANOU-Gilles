@@ -1,0 +1,142 @@
+/* Définition des couleurs */
+:root {
+    --primary-color: #3498db; /* Bleu principal */
+    --secondary-color: #ff9900; /* Or pour l'accent */
+    --background-color: #f9f9f9; /* Fond très clair */
+    --text-color: #333; /* Texte sombre */
+    --heading-color: #2c3e50; /* Couleur des titres */
+    --link-hover-color: #2980b9; /* Bleu plus foncé pour le survol des liens */
+    --border-color: #ddd; /* Couleur de bordure légère */
+}
+
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en forme du body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.header img {
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Liens */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Section */
+h3 {
+    font-size: 1.6rem;
+    color: var(--heading-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+/* Image */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Section Description */
+#description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* Section avec des diplômes et autres contenus */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}

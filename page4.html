@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA PAGE 4</title>
+    <!-- Lien vers la feuille de style Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Zone d'en-tête avec logo et titre */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .header img {
+            width: 80px;
+            height: auto;
+        }
+
+        .header h1 {
+            text-align: center;
+            color: #007bff;
+            /* Application d'un display de type block */
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            /* Ajouter une transition pour effet de survol */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Effet au survol du titre */
+        .header h1:hover {
+            color: #28a745; /* Vert vif */
+            transform: scale(1.1); /* Augmenter la taille du texte */
+        }
+
+        /* Justification du texte des paragraphes */
+        .justify-text {
+            text-align: justify;
+            margin: 20px 0;
+        }
+
+        /* Couleurs des titres de section */
+        .section-title {
+            background-color: #6c757d; /* Gris foncé */
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Fond des sections de contenu */
+        .section-content {
+            padding: 15px;
+            background-color: #f8f9fa; /* Fond très clair */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Liste avec couleurs personnalisées */
+        .cercle {
+            list-style-type: circle;
+            color: #17a2b8; /* Bleu clair */
+        }
+
+        .carre {
+            list-style-type: square;
+            color: #28a745; /* Vert */
+        }
+
+        .rien {
+            list-style-type: none;
+            color: #dc3545; /* Rouge */
+        }
+
+        /* Listes avec retrait et sans retrait */
+        .retrait {
+            list-style-position: outside;
+            background-color: #e9ecef; /* Gris très clair */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .pas_de_retrait {
+            list-style-position: inside;
+            background-color: #f1f3f5; /* Gris clair */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Amélioration des couleurs des éléments de la page */
+        .list-section {
+            margin-bottom: 30px;
+        }
+
+        .list-section h3 {
+            font-size: 1.25rem;
+            color: #007bff; /* Bleu vif pour les titres des listes */
+        }
+
+        /* Ajustement des couleurs pour les listes ordonnées */
+        ol {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Entête avec images et titre -->
+        <div class="header">
+            <a href="http://www.pigier-benin.com" target="_blank">
+                <img src="OIP.jpg" alt="Logo">
+            </a>
+            <h1>MA PAGE 4</h1>
+            <a href="http://www.pigier-benin.com" target="_blank">
+                <img src="OIP.jpg" alt="Logo">
+            </a>
+        </div>
+
+        <hr>
+
+        <!-- Section : Quelques listes non ordonnées -->
+        <div class="section-title">
+            <h2>Quelques listes non ordonnées</h2>
+        </div>
+        <div class="section-content justify-text">
+            <p>Voici une liste à puce non ordonnée sans modification (= <em>disc</em>) :</p>
+            <ul>
+                <li>Liste</li>
+                <li>à</li>
+                <li>puces</li>
+            </ul>
+
+            <p>Avec <em>circle</em> :</p>
+            <ul class="cercle">
+                <li>Liste</li>
+                <li>à</li>
+                <li>puces</li>
+            </ul>
+
+            <p>Avec <em>square</em>:</p>
+            <ul class="carre">
+                <li>Liste</li>
+                <li>à</li>
+                <li>puces</li>
+            </ul>
+
+            <p>Avec <em>none</em> (sans puces) : </p>
+            <ul class="rien">
+                <li>Liste</li>
+                <li>à</li>
+                <li>puces</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- Section : Quelques listes ordonnées -->
+        <div class="section-title">
+            <h2>Quelques listes ordonnées</h2>
+        </div>
+        <div class="section-content justify-text">
+            <p>Liste à puces ordonnée sans modification (= <em>decimal</em>) :</p>
+            <ol>
+                <li>Un</li>
+                <li>Deux</li>
+                <li>Trois</li>
+                <li>Quatre</li>
+            </ol>
+
+            <p>Avec <em>decimal-leading-zero</em> :</p>
+            <ol>
+                <li>Un</li>
+                <li>Deux</li>
+                <li>Trois</li>
+                <li>Quatre</li>
+            </ol>
+
+            <p>Avec <em>lower-alpha</em> :</p>
+            <ol>
+                <li>Un</li>
+                <li>Deux</li>
+                <li>Trois</li>
+                <li>Quatre</li>
+            </ol>
+
+            <p>Avec <em>upper-roman</em> :</p>
+            <ol>
+                <li>Un</li>
+                <li>Deux</li>
+                <li>Trois</li>
+                <li>Quatre</li>
+            </ol>
+
+            <p>Avec <em>lower-greek</em> :</p>
+            <ol>
+                <li>Un</li>
+                <li>Deux</li>
+                <li>Trois</li>
+                <li>Quatre</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- Section : Liste avec retrait (par défaut) -->
+        <div class="section-title">
+            <h2>Liste avec retrait (par défaut)</h2>
+        </div>
+        <div class="section-content justify-text">
+            <ul class="retrait">
+                <li>Liste à puces</li>
+                <li>Ligne 1 / Ligne 2</li>
+                <li>Vous pouvez voir que le texte est décalé sur la droite</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- Section : Liste sans retrait -->
+        <div class="section-title">
+            <h2>Liste sans retrait</h2>
+        </div>
+        <div class="section-content justify-text">
+            <ul class="pas_de_retrait">
+                <li>Liste à puces</li>
+                <li>Ligne 1 / Ligne 2</li>
+                <li>Vous pouvez voir que le texte n'est pas décalé sur la droite</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- Section : Définitions -->
+        <div class="section-title">
+            <h2>Définitions</h2>
+        </div>
+        <div class="section-content justify-text">
+            <dl>
+                <dt>Chat</dt>
+                <dd>Animal à 4 pattes qui fait "Miaou !"</dd>
+                <dt>Chien</dt>
+                <dd>Animal à 4 pattes qui fait "Ouaf Ouaf

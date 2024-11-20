@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        /* Style général pour la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;  /* Centre le contenu horizontalement */
+            align-items: center;      /* Centre le contenu verticalement */
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;       /* Centre le texte à l'intérieur des éléments */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Style du formulaire */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 2px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff;
+            padding: 0 10px;
+            background-color: #f1f9ff;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Style des boutons */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style pour le textarea */
+        textarea {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style des paragraphes */
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Espacement entre les champs */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.2rem;
+            }
+
+            fieldset {
+                padding: 15px;
+            }
+        }
+
+        /* Pour les très petits écrans (smartphones en portrait) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                padding: 10px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            fieldset {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>FORMULAIRE DE SOUHAIT</h1>
+        <form method="post" action="traitement.php">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <div class="form-group">
+                    <label for="nom">Quel est votre nom ?</label>
+                    <input type="text" name="nom" id="nom" tabindex="10" required />
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Quel est votre prénom ?</label>
+                    <input type="text" name="prenom" id="prenom" tabindex="20" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Quel est votre e-mail ?</label>
+                    <input type="email" name="email" id="email" tabindex="30" required />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre souhait</legend>
+                <p>Faites un souhait que vous voudriez voir exaucé :</p>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="riche" id="riche" tabindex="40" />
+                    <label for="riche">Etre riche</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="celebre" id="celebre" tabindex="50" />
+                    <label for="celebre">Etre célèbre</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="intelligent" id="intelligent" tabindex="60" />
+                    <label for="intelligent">Etre encore plus intelligent</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="autre" id="autre" tabindex="70" />
+                    <label for="autre">Autre...</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="precisions">Si "Autre", veuillez préciser :</label><br />
+                <textarea name="precisions" id="precisions" cols="40" rows="4" tabindex="80"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Envoyer" />
+                <input type="reset" value="Réinitialiser" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        /* Style général pour la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;  /* Centre le contenu horizontalement */
+            align-items: center;      /* Centre le contenu verticalement */
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;       /* Centre le texte à l'intérieur des éléments */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Style du formulaire */
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 2px solid #007bff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff;
+            padding: 0 10px;
+            background-color: #f1f9ff;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        /* Style des boutons */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style pour le textarea */
+        textarea {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style des paragraphes */
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Espacement entre les champs */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.2rem;
+            }
+
+            fieldset {
+                padding: 15px;
+            }
+        }
+
+        /* Pour les très petits écrans (smartphones en portrait) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                padding: 10px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            fieldset {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>FORMULAIRE DE SOUHAIT</h1>
+        <form method="post" action="traitement.php">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                <div class="form-group">
+                    <label for="nom">Quel est votre nom ?</label>
+                    <input type="text" name="nom" id="nom" tabindex="10" required />
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Quel est votre prénom ?</label>
+                    <input type="text" name="prenom" id="prenom" tabindex="20" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Quel est votre e-mail ?</label>
+                    <input type="email" name="email" id="email" tabindex="30" required />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre souhait</legend>
+                <p>Faites un souhait que vous voudriez voir exaucé :</p>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="riche" id="riche" tabindex="40" />
+                    <label for="riche">Etre riche</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="celebre" id="celebre" tabindex="50" />
+                    <label for="celebre">Etre célèbre</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="intelligent" id="intelligent" tabindex="60" />
+                    <label for="intelligent">Etre encore plus intelligent</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="souhait" value="autre" id="autre" tabindex="70" />
+                    <label for="autre">Autre...</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="precisions">Si "Autre", veuillez préciser :</label><br />
+                <textarea name="precisions" id="precisions" cols="40" rows="4" tabindex="80"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Envoyer" />
+                <input type="reset" value="Réinitialiser" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
